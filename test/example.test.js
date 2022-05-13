@@ -40,4 +40,3 @@ test('techBroArray Test', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
-// Prospective Expected Goes Under Here
