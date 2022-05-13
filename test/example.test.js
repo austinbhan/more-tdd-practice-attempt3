@@ -19,3 +19,14 @@ test('testArray Test', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
 });
+
+// Prospective Expected Goes Under Here
+`<div id="lotr-array"> 
+<h4 id="name-and-race">This is Frodo, a hobbit.</h4>
+<p id= "interests">His primary interests are breakfast.</p>
+</div>
+
+<div id="tech-bro-array">
+<h4 id="name-and-company">This is Larry Ellison. He founded Oracle.</h4>
+<p id="city">He's based in Redwood Shores.</p>
+</div>`
