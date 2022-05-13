@@ -39,7 +39,7 @@ export function renderTechBroArray(techBro) {
     divContainer.setAttribute('id', 'tech-bro-array');
 
     const img = document.createElement('img');
-    img.src = `./assets/${techBro.firstName}-${techBro.lastName}.jpg.`;
+    img.src = `./assets/${techBro.firstName}-${techBro.lastName}.jpg`;
     img.classList.add('sizing');
 
     const h4 = document.createElement('h4');

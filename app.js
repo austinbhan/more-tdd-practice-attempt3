@@ -1,11 +1,11 @@
 // import functions and grab DOM elements
 import { testArray } from './testArray.js';
 import { lotrArray } from './testArray.js';
-`import { techBroArray } from './testArray.js';`;
+import { techBroArray } from './testArray.js';
 
 import { renderTestArray } from './utils.js';
 import { renderLotrArray } from './utils.js';
-`import {  } from './utils.js';`;
+import { renderTechBroArray } from './utils.js';
 
 function firstArray() {
     const arrayOne = document.getElementById('array-one');
@@ -27,8 +27,12 @@ function secondArray() {
 }
 secondArray();
 
-`function thirdArray() {
-  const arrayThree = document.getElementById('array-three');
-}
+function thirdArray() {
+    const arrayThree = document.getElementById('array-three');
 
-`
+    for (let array of techBroArray) {
+        const arrayDiv = renderTechBroArray(array);
+        arrayThree.append(arrayDiv);
+    }
+}
+thirdArray();

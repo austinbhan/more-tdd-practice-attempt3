@@ -33,7 +33,7 @@ test('lotrArray Test', (expect) => {
 
 test('techBroArray Test', (expect) => {
 
-    const expected = `<div id="tech-bro-array"><img src="./assets/Larry-Ellison.jpg." class="sizing"><h4 id="name-and-company">This is Larry Ellison. He founded Oracle.</h4><p id="city">He's based in Redwood Shores.</p></div>`;
+    const expected = `<div id="tech-bro-array"><img src="./assets/Larry-Ellison.jpg" class="sizing"><h4 id="name-and-company">This is Larry Ellison. He founded Oracle.</h4><p id="city">He's based in Redwood Shores.</p></div>`;
 
     const actual = renderTechBroArray(techBroArray[0]);
 
