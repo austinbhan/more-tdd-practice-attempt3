@@ -1,8 +1,10 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { renderTestArray } from '../utils.js';
-import { testArray } from '../testArray.js';
+import { renderTestArray, renderLotrArray, renderTechBroArray } from '../utils.js';
+import { testArray, lotrArray, techBroArray } from '../testArray.js';
+
+
 
 const test = QUnit.test;
 
@@ -20,13 +22,22 @@ test('testArray Test', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
-// Prospective Expected Goes Under Here
-`<div id="lotr-array"> 
-<h4 id="name-and-race">This is Frodo, a hobbit.</h4>
-<p id= "interests">His primary interests are breakfast.</p>
-</div>
+test('lotrArray Test', (expect) => {
 
-<div id="tech-bro-array">
-<h4 id="name-and-company">This is Larry Ellison. He founded Oracle.</h4>
-<p id="city">He's based in Redwood Shores.</p>
-</div>`
+    const expected = `<div id="lotr-array"><img src="./assets/Frodo.jpg" class="sizing"><h4 id="name-and-race">This is Frodo, a hobbit.</h4><p id="interests">His primary interest(s) is/are breakfast.</p></div>`;
+
+    const actual = renderLotrArray(lotrArray[0]);
+
+    expect.equal(actual.outerHTML, expected);
+});
+
+test('techBroArray Test', (expect) => {
+
+    const expected = `<div id="tech-bro-array"><img src="./assets/Larry-Ellison.jpg." class="sizing"><h4 id="name-and-company">This is Larry Ellison. He founded Oracle.</h4><p id="city">He's based in Redwood Shores.</p></div>`;
+
+    const actual = renderTechBroArray(techBroArray[0]);
+
+    expect.equal(actual.outerHTML, expected);
+});
+
+// Prospective Expected Goes Under Here
